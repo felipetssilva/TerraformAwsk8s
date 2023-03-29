@@ -21,4 +21,6 @@ terraform/.terraform/
 terraform/AWStempCreds
 terraform/TerraformAwsk8s/
 terraform/main.tf
+.aws/
+ansible/
 
