@@ -5,7 +5,7 @@
   <groupId>com.go.test</groupId>
   <artifactId>gohello</artifactId>
   <version>1.0-SNAPSHOT</version>
-  <packaging>mvn-golang</packaging>
+  <packaging>go</packaging>
   
   <name>Hello GoLang</name>
   <description>Simple 'Hello World!' GoLang example</description>
@@ -31,15 +31,9 @@
     </license>
   </licenses>
 
- # <prerequisites>
- #   <maven>${mvn.version}</maven>
+  <prerequisites>
+    <maven>3.5.0</maven>
   </prerequisites>
-
-
-
-
-
-
 
   <plugin>
     <groupId>org.apache.maven.plugins</groupId>
@@ -94,6 +88,7 @@
         <version>${go.wrapper.plugin.version}</version>
         <extensions>true</extensions>
         <configuration>
+          <projectName>${project.artifactId}</projectName>
           <!--<goPath>${basedir}</goPath>-->
           <!--<enforceGoPathToEnd>true</enforceGoPathToEnd>-->
           <!--<verbose>true</verbose>-->
@@ -125,3 +120,5 @@
   </build>
 
 </project>
+
+
